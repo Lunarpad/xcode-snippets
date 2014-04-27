@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>obj</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Lifecycle
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (void)dealloc
+{
+    [self teardown];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Setup
+
+- (void)setup
+{
+    [self startObserving];
+}
+
+- (void)startObserving
+{
+    
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Teardown
+
+- (void)teardown
+{
+    [self stopObserving];
+}
+
+- (void)stopObserving
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Accessors
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+#pragma mark - Imperatives
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BB26FC37-8C7B-41FA-B39E-F220070FCE59</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>object essentials</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
